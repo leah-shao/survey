@@ -46,7 +46,7 @@ const reportData = {
 
                     title:"2026国际低空经济博览会在沪开幕",
 
-                    source:"来源：[公众号：科创板日报]",
+                    source:"点击阅读来源：[公众号：科创板日报]",
 
                     image:"assets/图片1.png",
 
@@ -79,7 +79,7 @@ const reportData = {
 
                     title:"OpenAI正式发布AI智能体运营平台Presence",
 
-                    source:"来源：[公众号：科创日报]",
+                    source:"点击阅读来源：[公众号：科创日报]",
 
                     image:"assets/图片2.png",
 
@@ -100,7 +100,7 @@ const reportData = {
 
                     title:"AMD全栈AI计算方案亮相",
 
-                    source:"来源：[公众号：腾讯日记]",
+                    source:"点击阅读来源：[公众号：腾讯日记]",
 
                     image:"assets/图片3.png",
 
@@ -121,7 +121,7 @@ const reportData = {
 
                     title:"Anthropic发布Claude Opus 5",
 
-                    source:"来源：[公众号：钛媒体AGI]",
+                    source:"点击阅读来源：[公众号：钛媒体AGI]",
 
                     image:"assets/图片4.png",
 
@@ -144,7 +144,7 @@ const reportData = {
 
                     title:"长鑫科技登陆科创板市值破3.6万亿登顶A股",
 
-                    source:"来源：[公众号：腾讯科技]",
+                    source:"点击阅读来源：[公众号：腾讯科技]",
 
                     image:"assets/图片5.jpg",
 
@@ -176,7 +176,7 @@ const reportData = {
 
                     title:"[面壁智能] 面壁智能MiniCPM系列深度赋能三星Galaxy AI",
 
-                    source:"来源：[公众号：面壁智能]",
+                    source:"点击阅读来源：[公众号：面壁智能]",
 
                     image:"assets/图片6.jpg",
 
@@ -195,7 +195,7 @@ const reportData = {
 
                     title:"[红熊AI] 红熊AI记忆科学MemoryBear v0.3.13版本发布",
 
-                    source:"来源：[公众号：红熊AI]",
+                    source:"点击阅读来源：[公众号：红熊AI]",
 
                     image:"assets/图片7.png",
 
@@ -216,7 +216,7 @@ const reportData = {
 
                     title:"[非夕科技] 非夕科技首次亮相印度，以本地生态推动自适应机器人全球落地",
 
-                    source:"来源：[公众号：非夕科技]",
+                    source:"点击阅读来源：[公众号：非夕科技]",
 
                     image:"assets/图片8.png",
 
@@ -237,7 +237,7 @@ const reportData = {
 
                     title:"[途深智合] 首届\"大国新药\"全球会议，四方签约共建AI生物制药\"超级工厂\"",
 
-                    source:"来源：[公众号：途深智合]",
+                    source:"点击阅读来源：[公众号：途深智合]",
 
                     image:"assets/图片9.png",
 
@@ -270,7 +270,7 @@ const reportData = {
 
                     title:"陶哲轩最新演讲：数学正在进入\"工业时代\"",
 
-                    source:"来源：[公众号：DeepTech深科技]",
+                    source:"点击阅读来源：[公众号：DeepTech深科技]",
 
                     image:"assets/图片10.png",
 
