@@ -1,0 +1,553 @@
+/* ==========================================
+   Animation
+========================================== */
+
+/* 页面滚动更顺滑 */
+
+html{
+
+    scroll-behavior:smooth;
+
+}
+
+/* ==========================================
+   Hero 光晕
+========================================== */
+
+.hero::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:520px;
+
+    height:520px;
+
+    left:50%;
+
+    top:80px;
+
+    transform:translateX(-50%);
+
+    border-radius:50%;
+
+    background:radial-gradient(
+
+        rgba(60,210,255,.35),
+
+        rgba(60,210,255,0)
+
+    );
+
+    filter:blur(30px);
+
+    animation:
+
+        heroGlow 8s ease-in-out infinite;
+
+}
+
+/* ==========================================
+   Card Hover
+========================================== */
+
+.card{
+
+    will-change:transform;
+
+}
+
+.card:hover{
+
+    transform:
+
+        translateY(-8px)
+
+        scale(1.01);
+
+}
+
+/* ==========================================
+   按钮流光
+========================================== */
+
+.hero-button{
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+.hero-button::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:60px;
+
+    height:220%;
+
+    left:-120px;
+
+    top:-60%;
+
+    background:
+
+        rgba(255,255,255,.45);
+
+    transform:
+
+        rotate(30deg);
+
+}
+
+.hero-button:hover::before{
+
+    animation:
+
+        shine .8s ease;
+
+}
+
+/* ==========================================
+   Card 渐入
+========================================== */
+
+.card{
+
+    opacity:0;
+
+    transform:
+
+        translateY(40px);
+
+}
+
+.card.show{
+
+    animation:
+
+        cardUp .8s forwards;
+
+}
+
+/* ==========================================
+   Section 标题
+========================================== */
+
+.chapter-header{
+
+    opacity:0;
+
+    transform:
+
+        translateX(-30px);
+
+}
+
+.chapter-header.show{
+
+    animation:
+
+        slideLeft .8s forwards;
+
+}
+
+/* ==========================================
+   Timeline
+========================================== */
+
+.timeline-item{
+
+    opacity:0;
+
+    transform:
+
+        translateX(30px);
+
+}
+
+.timeline-item.show{
+
+    animation:
+
+        slideRight .8s forwards;
+
+}
+
+/* ==========================================
+   KPI
+========================================== */
+
+.metric{
+
+    opacity:0;
+
+    transform:
+
+        scale(.85);
+
+}
+
+.metric.show{
+
+    animation:
+
+        zoomIn .8s forwards;
+
+}
+
+/* ==========================================
+   Matrix
+========================================== */
+
+.matrix-item{
+
+    opacity:0;
+
+    transform:
+
+        translateY(30px);
+
+}
+
+.matrix-item.show{
+
+    animation:
+
+        fadeUp .8s forwards;
+
+}
+
+/* ==========================================
+   图片
+========================================== */
+
+.media-image{
+
+    overflow:hidden;
+
+}
+
+.media-image img{
+
+    transition:
+
+        transform .8s ease;
+
+}
+
+.media-image:hover img{
+
+    transform:
+
+        scale(1.08);
+
+}
+
+/* ==========================================
+   Flow
+========================================== */
+
+.flow-item{
+
+    transition:
+
+        .35s;
+
+}
+
+.flow-item:hover{
+
+    transform:
+
+        translateY(-8px);
+
+}
+
+.flow-arrow{
+
+    animation:
+
+        arrowMove 2s infinite;
+
+}
+
+/* ==========================================
+   Callout
+========================================== */
+
+.callout{
+
+    transition:.35s;
+
+}
+
+.callout:hover{
+
+    transform:translateY(-6px);
+
+}
+
+/* ==========================================
+   Divider
+========================================== */
+
+.divider{
+
+    overflow:hidden;
+
+    position:relative;
+
+}
+
+.divider::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:120px;
+
+    height:100%;
+
+    left:-120px;
+
+    top:0;
+
+    background:
+
+        linear-gradient(
+
+            90deg,
+
+            transparent,
+
+            rgba(255,255,255,.9),
+
+            transparent
+
+        );
+
+    animation:
+
+        dividerLight 4s infinite;
+
+}
+
+/* ==========================================
+   Keyframes
+========================================== */
+
+@keyframes heroGlow{
+
+    0%{
+
+        transform:
+
+            translateX(-50%)
+
+            scale(1);
+
+    }
+
+    50%{
+
+        transform:
+
+            translateX(-50%)
+
+            scale(1.08);
+
+    }
+
+    100%{
+
+        transform:
+
+            translateX(-50%)
+
+            scale(1);
+
+    }
+
+}
+
+@keyframes float{
+
+    0%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(-18px);
+
+    }
+
+    100%{
+
+        transform:translateY(0);
+
+    }
+
+}
+
+@keyframes shine{
+
+    from{
+
+        left:-120px;
+
+    }
+
+    to{
+
+        left:320px;
+
+    }
+
+}
+
+@keyframes cardUp{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(40px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+@keyframes slideLeft{
+
+    from{
+
+        opacity:0;
+
+        transform:translateX(-40px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:none;
+
+    }
+
+}
+
+@keyframes slideRight{
+
+    from{
+
+        opacity:0;
+
+        transform:translateX(40px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:none;
+
+    }
+
+}
+
+@keyframes zoomIn{
+
+    from{
+
+        opacity:0;
+
+        transform:scale(.8);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:scale(1);
+
+    }
+
+}
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(40px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:none;
+
+    }
+
+}
+
+@keyframes arrowMove{
+
+    0%{
+
+        opacity:.3;
+
+    }
+
+    50%{
+
+        opacity:1;
+
+    }
+
+    100%{
+
+        opacity:.3;
+
+    }
+
+}
+
+@keyframes dividerLight{
+
+    from{
+
+        left:-120px;
+
+    }
+
+    to{
+
+        left:100%;
+
+    }
+
+}

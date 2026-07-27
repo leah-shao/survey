@@ -1,0 +1,113 @@
+:root{
+
+    /* =====================
+       Color
+    ===================== */
+
+    --primary:#22b8e8;
+
+    --primary-light:#71dfff;
+
+    --primary-dark:#0f8fc4;
+
+    --secondary:#3cc8ff;
+
+    --accent:#47d4ff;
+
+    --bg:#eefbff;
+
+    --bg-soft:#f7fdff;
+
+    --white:#ffffff;
+
+    --text:#23333c;
+
+    --text-light:#667784;
+
+    --border:#d8eef7;
+
+    --line:#dfeff6;
+
+    --shadow:
+
+        0 10px 25px rgba(0,0,0,.08);
+
+    --shadow-hover:
+
+        0 18px 40px rgba(0,0,0,.12);
+
+    /* =====================
+       Radius
+    ===================== */
+
+    --radius-xs:4px;
+
+    --radius-sm:8px;
+
+    --radius-md:14px;
+
+    --radius-lg:22px;
+
+    --radius-xl:30px;
+
+    /* =====================
+       Space
+    ===================== */
+
+    --space-4:4px;
+
+    --space-8:8px;
+
+    --space-12:12px;
+
+    --space-16:16px;
+
+    --space-20:20px;
+
+    --space-24:24px;
+
+    --space-32:32px;
+
+    --space-40:40px;
+
+    --space-48:48px;
+
+    --space-64:64px;
+
+    --space-80:80px;
+
+    /* =====================
+       Font
+    ===================== */
+
+    --font-xs:12px;
+
+    --font-sm:14px;
+
+    --font-md:16px;
+
+    --font-lg:18px;
+
+    --font-xl:24px;
+
+    --font-2xl:34px;
+
+    --font-3xl:48px;
+
+    /* =====================
+       Width
+    ===================== */
+
+    --page-width:780px;
+
+    --content-width:680px;
+
+    /* =====================
+       Transition
+    ===================== */
+
+    --transition:
+
+        all .35s ease;
+
+}

@@ -1,0 +1,563 @@
+/* =====================================================
+   Chapter
+===================================================== */
+
+.chapter{
+
+    --chapter-accent:var(--primary);
+    --chapter-accent-soft:#eefbff;
+
+    position:relative;
+
+    padding-top:10px;
+
+}
+
+/* =====================================================
+   Chapter Header
+===================================================== */
+
+.chapter-header{
+
+    display:flex;
+
+    align-items:center;
+
+    margin-bottom:36px;
+
+}
+
+/* =====================================================
+   左侧数字
+===================================================== */
+
+.chapter-index{
+
+    width:52px;
+
+    height:52px;
+
+    flex:none;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    margin-right:18px;
+
+    border-radius:50%;
+
+    color:#fff;
+
+    font-size:22px;
+
+    font-weight:700;
+
+    background:var(--chapter-accent);
+
+    box-shadow:0 8px 22px rgba(0,0,0,.12);
+
+}
+
+/* =====================================================
+   蓝色标题条
+===================================================== */
+
+.chapter-title{
+
+    position:relative;
+
+    display:inline-flex;
+
+    align-items:center;
+
+    height:52px;
+
+    padding:0 42px;
+
+    color:#fff;
+
+    font-size:20px;
+
+    font-weight:700;
+
+    letter-spacing:2px;
+
+    border-radius:999px;
+
+    background:var(--chapter-accent);
+
+}
+
+/* 左箭头 */
+
+.chapter-title::before{
+
+    content:"";
+
+    position:absolute;
+
+    left:-18px;
+
+    width:0;
+
+    height:0;
+
+    border-top:26px solid transparent;
+
+    border-bottom:26px solid transparent;
+
+    border-right:18px solid var(--chapter-accent);
+
+}
+
+/* 右箭头 */
+
+.chapter-title::after{
+
+    content:"";
+
+    position:absolute;
+
+    right:-18px;
+
+    width:0;
+
+    height:0;
+
+    border-top:26px solid transparent;
+
+    border-bottom:26px solid transparent;
+
+    border-left:18px solid var(--chapter-accent);
+
+}
+
+/* =====================================================
+   Card 容器
+===================================================== */
+
+.chapter-body{
+
+    display:grid;
+
+    gap:24px;
+
+}
+
+/* =====================================================
+   Card
+===================================================== */
+
+.card{
+
+    position:relative;
+
+    overflow:hidden;
+
+    background:linear-gradient(135deg, #fff 0%, var(--chapter-accent-soft) 100%);
+
+    border-radius:20px;
+
+    padding:28px;
+
+    box-shadow:var(--shadow);
+
+    transition:var(--transition);
+
+    border:1px solid rgba(24,51,64,.08);
+
+}
+
+.card:hover{
+
+    transform:translateY(-6px);
+
+    box-shadow:var(--shadow-hover);
+
+}
+
+/* 顶部渐变 */
+
+.card::before{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    top:0;
+
+    width:100%;
+
+    height:4px;
+
+    background:linear-gradient(90deg, var(--chapter-accent), #80e4ff);
+
+}
+
+/* =====================================================
+   Card 标题
+===================================================== */
+
+.card-title{
+
+    display:flex;
+
+    align-items:center;
+
+    margin-bottom:18px;
+
+    font-size:20px;
+
+    font-weight:700;
+
+    color:#183340;
+
+}
+
+/* 蓝色小圆点 */
+
+.card-title::before{
+
+    content:"";
+
+    width:12px;
+
+    height:12px;
+
+    margin-right:10px;
+
+    border-radius:50%;
+
+    background:var(--chapter-accent);
+
+}
+
+/* =====================================================
+   内容
+===================================================== */
+
+.card-media{
+
+    margin:12px 0 16px;
+
+    overflow:hidden;
+
+    border-radius:16px;
+
+    background:var(--chapter-accent-soft);
+
+}
+
+.card-image{
+
+    display:block;
+
+    width:100%;
+
+    height:180px;
+
+    object-fit:cover;
+
+}
+
+.card-subtitle{
+
+    margin-bottom:8px;
+
+    color:var(--chapter-accent);
+
+    font-size:15px;
+
+    font-weight:700;
+
+}
+
+.card-source-wrap{
+
+    margin-bottom:16px;
+
+}
+
+.card-source{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    color:var(--chapter-accent);
+
+    font-size:13px;
+
+    font-weight:600;
+
+    text-decoration:none;
+
+}
+
+.card-source:hover{
+
+    text-decoration:underline;
+
+}
+
+.card-content{
+
+    color:#5c707b;
+
+    font-size:16px;
+
+    line-height:2;
+
+}
+
+/* =====================================================
+   Tag
+===================================================== */
+
+.tag{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    padding:6px 14px;
+
+    border-radius:999px;
+
+    background:#ecfbff;
+
+    color:var(--primary-dark);
+
+    font-size:13px;
+
+    margin-right:8px;
+
+    margin-bottom:8px;
+
+}
+
+/* =====================================================
+   Highlight
+===================================================== */
+
+.highlight{
+
+    color:var(--primary-dark);
+
+    font-weight:700;
+
+}
+
+/* =====================================================
+   Quote
+===================================================== */
+
+.quote{
+
+    position:relative;
+
+    padding:24px;
+
+    margin:18px 0;
+
+    border-left:4px solid var(--primary);
+
+    background:#f6fdff;
+
+    border-radius:12px;
+
+    color:#54707d;
+
+}
+
+.quote::before{
+
+    content:"“";
+
+    position:absolute;
+
+    left:18px;
+
+    top:6px;
+
+    font-size:46px;
+
+    color:#9feaff;
+
+}
+
+/* =====================================================
+   Info
+===================================================== */
+
+.info{
+
+    display:flex;
+
+    gap:18px;
+
+    padding:20px;
+
+    margin-top:20px;
+
+    border-radius:16px;
+
+    background:#f4fdff;
+
+}
+
+.info-icon{
+
+    width:48px;
+
+    height:48px;
+
+    flex:none;
+
+    border-radius:50%;
+
+    background:linear-gradient(
+        135deg,
+        var(--primary),
+        #63deff
+    );
+
+}
+
+.info-content{
+
+    flex:1;
+
+}
+
+/* =====================================================
+   List
+===================================================== */
+
+.list{
+
+    margin-top:16px;
+
+}
+
+.list li{
+
+    position:relative;
+
+    padding-left:24px;
+
+    margin-bottom:10px;
+
+    color:#5f727d;
+
+}
+
+.list li::before{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    top:11px;
+
+    width:8px;
+
+    height:8px;
+
+    border-radius:50%;
+
+    background:var(--primary);
+
+}
+
+/* =====================================================
+   两列布局
+===================================================== */
+
+.grid-2{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:24px;
+
+}
+
+/* =====================================================
+   三列布局
+===================================================== */
+
+.grid-3{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:24px;
+
+}
+
+/* =====================================================
+   指标卡
+===================================================== */
+
+.metric{
+
+    text-align:center;
+
+    padding:28px;
+
+    border-radius:18px;
+
+    background:#fff;
+
+    box-shadow:var(--shadow);
+
+}
+
+.metric-value{
+
+    font-size:42px;
+
+    font-weight:700;
+
+    color:var(--primary);
+
+}
+
+.metric-label{
+
+    margin-top:8px;
+
+    color:#71848f;
+
+}
+
+/* =====================================================
+   Divider
+===================================================== */
+
+.divider{
+
+    width:100%;
+
+    height:1px;
+
+    margin:30px 0;
+
+    background:linear-gradient(
+        90deg,
+        transparent,
+        rgba(34,184,232,.3),
+        transparent
+    );
+
+}

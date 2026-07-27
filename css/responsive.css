@@ -1,0 +1,375 @@
+/* ==========================================
+   Desktop Large ≥1400
+========================================== */
+
+@media (min-width:1400px){
+
+    :root{
+
+        --page-width:960px;
+
+    }
+
+    .hero h1{
+
+        font-size:54px;
+
+    }
+
+}
+
+/* ==========================================
+   Laptop ≤1200
+========================================== */
+
+@media (max-width:1200px){
+
+    :root{
+
+        --page-width:860px;
+
+    }
+
+    .metrics{
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+    .matrix{
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+}
+
+/* ==========================================
+   Tablet ≤992
+========================================== */
+
+@media (max-width:992px){
+
+    .report{
+
+        width:calc(100% - 40px);
+
+    }
+
+    .hero{
+
+        padding-top:60px;
+
+    }
+
+    .hero h1{
+
+        font-size:38px;
+
+    }
+
+    .media{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .grid-3{
+
+        grid-template-columns:1fr 1fr;
+
+    }
+
+    .flow{
+
+        flex-direction:column;
+
+    }
+
+    .flow-arrow{
+
+        width:2px;
+
+        height:40px;
+
+    }
+
+    .flow-arrow::after{
+
+        right:-4px;
+
+        top:auto;
+
+        bottom:-2px;
+
+        border:none;
+
+        border-left:5px solid transparent;
+
+        border-right:5px solid transparent;
+
+        border-top:10px solid var(--primary);
+
+    }
+
+}
+
+/* ==========================================
+   Tablet ≤768
+========================================== */
+
+@media (max-width:768px){
+
+    :root{
+
+        --space-40:28px;
+
+        --space-64:42px;
+
+    }
+
+    .hero h1{
+
+        font-size:32px;
+
+    }
+
+    .hero-desc{
+
+        font-size:16px;
+
+    }
+
+    .chapter-header{
+
+        align-items:flex-start;
+
+    }
+
+    .chapter-title{
+
+        font-size:18px;
+
+        padding:0 24px;
+
+    }
+
+    .chapter-index{
+
+        width:44px;
+
+        height:44px;
+
+        font-size:18px;
+
+    }
+
+    .summary-card{
+
+        padding:28px;
+
+    }
+
+    .grid-2{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .grid-3{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .metrics{
+
+        grid-template-columns:1fr 1fr;
+
+    }
+
+    .matrix{
+
+        grid-template-columns:1fr;
+
+    }
+
+}
+
+/* ==========================================
+   Mobile ≤576
+========================================== */
+
+@media (max-width:576px){
+
+    .report{
+
+        width:calc(100% - 24px);
+
+    }
+
+    .hero{
+
+        padding-top:40px;
+
+        padding-bottom:50px;
+
+    }
+
+    .hero-logo{
+
+        width:140px;
+
+    }
+
+    .hero h1{
+
+        font-size:28px;
+
+        line-height:1.4;
+
+    }
+
+    .hero-button{
+
+        width:180px;
+
+        height:48px;
+
+        font-size:14px;
+
+    }
+
+    .chapter{
+
+        margin-top:50px;
+
+    }
+
+    .chapter-header{
+
+        flex-direction:row;
+
+    }
+
+    .chapter-title{
+
+        flex:1;
+
+        height:44px;
+
+        font-size:16px;
+
+    }
+
+    .chapter-title::before{
+
+        border-top:22px solid transparent;
+
+        border-bottom:22px solid transparent;
+
+    }
+
+    .chapter-title::after{
+
+        border-top:22px solid transparent;
+
+        border-bottom:22px solid transparent;
+
+    }
+
+    .card{
+
+        padding:20px;
+
+    }
+
+    .card-title{
+
+        font-size:18px;
+
+    }
+
+    .card-content{
+
+        font-size:15px;
+
+    }
+
+    .metrics{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .metric{
+
+        padding:24px;
+
+    }
+
+    .metric-value{
+
+        font-size:34px;
+
+    }
+
+    .timeline-item{
+
+        padding-left:46px;
+
+    }
+
+    .timeline-card{
+
+        padding:18px;
+
+    }
+
+    .callout{
+
+        flex-direction:column;
+
+    }
+
+    .info{
+
+        flex-direction:column;
+
+    }
+
+}
+
+/* ==========================================
+   Small Mobile ≤375
+========================================== */
+
+@media (max-width:375px){
+
+    .hero h1{
+
+        font-size:24px;
+
+    }
+
+    .chapter-title{
+
+        font-size:15px;
+
+        padding:0 16px;
+
+    }
+
+    .summary-card{
+
+        padding:20px;
+
+    }
+
+    .card{
+
+        padding:18px;
+
+    }
+
+}
