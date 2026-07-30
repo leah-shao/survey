@@ -177,8 +177,8 @@ const reportData = {
                     title:"[比特无限]明略科技将成为普联软件控股股东，加速推进AIRollup战略",
 
                     source:"点击阅读来源：[公众号：上海模速空间大模型创新生态社区]",
-
-                    source:"来源：[公众号：面壁智能]",
+                    
+                    image:"assets/图片5.png",
 
                     sourceUrl:"https://mp.weixin.qq.com/s/joD9cTkbTrfph6W7W2ZFTQ",
 
