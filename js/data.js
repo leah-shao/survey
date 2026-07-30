@@ -100,7 +100,7 @@ const reportData = {
 
                     title:"字节调整飞书、火山、豆包组织架构，ToB业务走向一体化",
 
-                    source:"来源：[公众号：腾讯日记]",
+                    source:"来源：[公众号：钛媒体AI]",
 
                     image:"assets/图片3.png",
 
@@ -121,7 +121,7 @@ const reportData = {
 
                     title:"黄仁勋发布首条推文站队开源",
 
-                    source:"来源：[公众号：钛媒体AGI]",
+                    source:"来源：[公众号：澎湃新闻]",
 
                     image:"assets/图片4.png",
 
@@ -176,7 +176,7 @@ const reportData = {
 
                     title:"[明略科技]明略科技将成为普联软件控股股东，加速推进AIRollup战略",
 
-                    source:"来源：[公众号：红熊AI]",
+                    source:"来源：[公众号：明略科技]",
 
                     image:"assets/图片6.png",
 
@@ -195,7 +195,7 @@ const reportData = {
 
                     title:"[联影智能]联影智能登顶MedBench刷新医疗文本大模型成绩",
 
-                    source:"来源：[公众号：非夕科技]",
+                    source:"来源：[公众号：联影智能]",
 
                     image:"assets/图片7.png",
 
