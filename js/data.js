@@ -234,7 +234,7 @@ const reportData = {
 
                     title:"[红熊AI]红熊AI AIGC应用平台上线",
 
-                    source:"来源：[公众号：途深智合]",
+                    source:"来源：[公众号：红熊AI]",
 
                     image:"assets/图片9.png",
 
@@ -286,7 +286,7 @@ const reportData = {
 
                     title:"上海AI实验室推出微观结构与性质推理模型SciReasoner",
 
-                    source:"来源：[公众号：DeepTech深科技]",
+                    source:"来源：[公众号：上海人工智能实验室]",
 
                     image:"assets/图片11.png",
 
