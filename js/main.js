@@ -316,7 +316,7 @@
         targets.forEach((el) => observer.observe(el));
     };
 
-    const getWeekData = (data, weekIndex = 0) => {
+    const getWeekData = (data, weekIndex = -1) => {
         const weeks = Array.isArray(data.weeks) && data.weeks.length > 0
             ? data.weeks
             : [{
@@ -325,7 +325,8 @@
                 chapters: data.chapters || []
             }];
 
-        const safeIndex = Math.min(Math.max(weekIndex, 0), weeks.length - 1);
+        const normalizedIndex = weekIndex < 0 ? weeks.length - 1 : weekIndex;
+        const safeIndex = Math.min(Math.max(normalizedIndex, 0), weeks.length - 1);
         return weeks[safeIndex] || weeks[0];
     };
 
@@ -348,7 +349,7 @@
         </section>
     `;
 
-    const renderReport = (data, weekIndex = 0) => {
+    const renderReport = (data, weekIndex = -1) => {
         const weeks = Array.isArray(data.weeks) && data.weeks.length > 0
             ? data.weeks
             : [{
@@ -356,11 +357,12 @@
                 hero: data.hero || {},
                 chapters: data.chapters || []
             }];
-        const activeWeek = getWeekData(data, weekIndex);
+        const normalizedIndex = weekIndex < 0 ? weeks.length - 1 : weekIndex;
+        const activeWeek = getWeekData(data, normalizedIndex);
 
         root.innerHTML = `
             ${renderHero(activeWeek.hero || data.hero || {})}
-            ${renderPagination(weeks, weekIndex)}
+            ${renderPagination(weeks, normalizedIndex)}
             <!-- ${renderSummary(activeWeek.summary || data.summary || {})} -->
             ${(activeWeek.chapters || []).map((chapter, index) => renderChapter(chapter, index)).join('')}
             ${renderFooter()}
@@ -377,7 +379,7 @@
     };
 
     const init = () => {
-        renderReport(reportData, 0);
+        renderReport(reportData, -1);
     };
 
     if (document.readyState === 'loading') {
