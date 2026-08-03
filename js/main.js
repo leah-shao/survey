@@ -316,19 +316,68 @@
         targets.forEach((el) => observer.observe(el));
     };
 
-    const renderReport = (data) => {
+    const getWeekData = (data, weekIndex = 0) => {
+        const weeks = Array.isArray(data.weeks) && data.weeks.length > 0
+            ? data.weeks
+            : [{
+                label: data.weekLabel || '第1周',
+                hero: data.hero || {},
+                chapters: data.chapters || []
+            }];
+
+        const safeIndex = Math.min(Math.max(weekIndex, 0), weeks.length - 1);
+        return weeks[safeIndex] || weeks[0];
+    };
+
+    const renderPagination = (weeks, activeIndex) => `
+        <section class="report-pagination">
+            <div class="pagination-head">
+                <span class="pagination-label">切换查看不同时间段的报告内容</span>
+            </div>
+            <div class="pagination-list">
+                ${(weeks || []).map((week, index) => `
+                    <button
+                        class="pagination-btn${index === activeIndex ? ' is-active' : ''}"
+                        type="button"
+                        data-week-index="${index}"
+                    >
+                        ${escapeHtml(week.label || `第${index + 1}周`)}
+                    </button>
+                `).join('')}
+            </div>
+        </section>
+    `;
+
+    const renderReport = (data, weekIndex = 0) => {
+        const weeks = Array.isArray(data.weeks) && data.weeks.length > 0
+            ? data.weeks
+            : [{
+                label: data.weekLabel || '第1周',
+                hero: data.hero || {},
+                chapters: data.chapters || []
+            }];
+        const activeWeek = getWeekData(data, weekIndex);
+
         root.innerHTML = `
-            ${renderHero(data.hero || {})}
-            <!-- ${renderSummary(data.summary || {})} -->
-            ${(data.chapters || []).map((chapter, index) => renderChapter(chapter, index)).join('')}
+            ${renderHero(activeWeek.hero || data.hero || {})}
+            ${renderPagination(weeks, weekIndex)}
+            <!-- ${renderSummary(activeWeek.summary || data.summary || {})} -->
+            ${(activeWeek.chapters || []).map((chapter, index) => renderChapter(chapter, index)).join('')}
             ${renderFooter()}
         `;
+
+        root.querySelectorAll('.pagination-btn').forEach((button) => {
+            button.addEventListener('click', () => {
+                const nextIndex = Number(button.dataset.weekIndex || 0);
+                renderReport(data, nextIndex);
+            });
+        });
 
         setupRevealAnimation();
     };
 
     const init = () => {
-        renderReport(reportData);
+        renderReport(reportData, 0);
     };
 
     if (document.readyState === 'loading') {

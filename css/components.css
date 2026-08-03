@@ -136,6 +136,116 @@
 }
 
 /* =====================================================
+   周次分页
+===================================================== */
+
+.report-pagination{
+
+    margin-bottom:32px;
+
+    padding:22px 24px;
+
+    border:1px solid rgba(24,51,64,.08);
+
+    border-radius:22px;
+
+    background:linear-gradient(135deg, #ffffff 0%, #f3fcff 100%);
+
+    box-shadow:var(--shadow);
+
+}
+
+.pagination-head{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    gap:12px;
+
+    margin-bottom:16px;
+
+    flex-wrap:wrap;
+
+}
+
+.pagination-label{
+
+    color:var(--primary-dark);
+
+    font-size:13px;
+
+    font-weight:700;
+
+    letter-spacing:2px;
+
+    text-transform:uppercase;
+
+}
+
+.pagination-hint{
+
+    color:var(--text-light);
+
+    font-size:13px;
+
+}
+
+.pagination-list{
+
+    display:flex;
+
+    gap:12px;
+
+    flex-wrap:wrap;
+
+}
+
+.pagination-btn{
+
+    border:none;
+
+    padding:10px 16px;
+
+    border-radius:999px;
+
+    color:var(--text);
+
+    font-size:14px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    background:#fff;
+
+    box-shadow:0 8px 16px rgba(0,0,0,.06);
+
+    transition:var(--transition);
+
+}
+
+.pagination-btn:hover{
+
+    transform:translateY(-2px);
+
+    color:var(--primary-dark);
+
+}
+
+.pagination-btn.is-active{
+
+    color:#fff;
+
+    background:linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+
+    box-shadow:0 12px 24px rgba(34,184,232,.24);
+
+}
+
+/* =====================================================
    Card 容器
 ===================================================== */
 
